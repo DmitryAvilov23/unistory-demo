@@ -143,16 +143,26 @@ input[type="range"]::-ms-track {
     height: 100%;
   }
 }
-.swiper-slide {
+.swiper-slide:not(.swiper-slide-active) {
   text-align: center;
   font-size: 18px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000000b8;
+    top: 0;
+    left: 0;
+  }
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .swiper-button-next,
@@ -177,7 +187,7 @@ input[type="range"]::-ms-track {
 }
 .swiper-slide-next,
 .swiper-slide-prev {
-  opacity: 0.4;
+  opacity: 1;
 }
 .swiper-slide-active {
 }
@@ -286,6 +296,9 @@ input[type="range"]::-ms-track {
   @media screen and (max-width: 660px) {
     flex-wrap: nowrap;
   }
+  @media screen and (max-width: 350px) {
+    flex-wrap: wrap;
+  }
 
   & > p {
     margin-right: 18px;
@@ -307,6 +320,9 @@ input[type="range"]::-ms-track {
   }
   @media screen and (max-width: 660px) {
     font-size: 35px;
+  }
+  @media screen and (max-width: 350px) {
+    font-size: 24px;
   }
   & > span:first-of-type {
     color: #2edae1;
@@ -366,6 +382,9 @@ input[type="range"]::-ms-track {
     transform: translateX(-50%);
     filter: blur(5px);
     opacity: 0.3;
+    @media screen and (max-width: 660px) {
+      background-image: url("/assets/icons/idea-bg-mobile.svg");
+    }
   }
   &__content {
     padding-bottom: 162px;
@@ -487,6 +506,9 @@ input[type="range"]::-ms-track {
     transform: translateX(-50%);
     filter: blur(5px);
     opacity: 0.3;
+    @media screen and (max-width: 660px) {
+      background-image: url("/assets/icons/success-bg-mobile.svg");
+    }
   }
   &__content {
     padding-bottom: 148px;
@@ -590,6 +612,7 @@ input[type="range"]::-ms-track {
           padding-left: 30px;
           @media screen and (max-width: 660px) {
             margin-bottom: 0;
+            flex-wrap: wrap;
           }
           & div {
             margin-right: 7px;
@@ -707,7 +730,7 @@ input[type="range"]::-ms-track {
 
           @media screen and (max-width: 660px) {
             right: 10px;
-            bottom: -364px;
+            bottom: -20px;
           }
         }
         & > p {
@@ -760,6 +783,9 @@ input[type="range"]::-ms-track {
     transform: translateX(-50%);
     filter: blur(5px);
     opacity: 0.3;
+    @media screen and (max-width: 660px) {
+      background-image: url("/assets/icons/blockhain-bg-mobile.svg");
+    }
   }
   &__content {
     padding-bottom: 117px;
@@ -777,11 +803,11 @@ input[type="range"]::-ms-track {
       @media screen and (max-width: 1000px) {
         display: flex;
         flex-direction: column-reverse;
-        margin-bottom: 0;
+        margin-bottom: 70px;
       }
       &-right {
         position: relative;
-        padding: 36px 32px;
+        padding: 45px 32px;
         max-width: 100%;
         height: 100%;
         display: flex;
@@ -956,7 +982,7 @@ input[type="range"]::-ms-track {
         }
       }
       & > input {
-        font-weight: normal;
+        font-weight: 600;
         font-size: 14px;
         color: rgba(55, 54, 54, 0.7);
         margin-bottom: 21px;
@@ -966,7 +992,7 @@ input[type="range"]::-ms-track {
         padding: 16px 26px;
         width: 85%;
         &::placeholder {
-          font-weight: normal;
+          font-weight: 600;
           font-size: 14px;
           line-height: 40px;
           color: rgba(55, 54, 54, 0.7);
@@ -974,7 +1000,7 @@ input[type="range"]::-ms-track {
         }
       }
       & .description {
-        font-weight: normal;
+        font-weight: 600;
         font-size: 14px;
         color: rgba(55, 54, 54, 0.7);
         margin-bottom: 21px;
@@ -985,7 +1011,7 @@ input[type="range"]::-ms-track {
         width: 85%;
 
         &::placeholder {
-          font-weight: normal;
+          font-weight: 600;
           font-size: 14px;
           color: rgba(55, 54, 54, 0.7);
           opacity: 0.7;

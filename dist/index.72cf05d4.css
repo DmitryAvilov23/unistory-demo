@@ -188,15 +188,25 @@ input[type=range]::-ms-track {
     height: 100%;
   }
 }
-.swiper-slide {
+.swiper-slide:not(.swiper-slide-active) {
   text-align: center;
   font-size: 18px;
+  position: relative;
+}
+.swiper-slide:not(.swiper-slide-active)::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000000b8;
+  top: 0;
+  left: 0;
 }
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .swiper-button-next,
 .swiper-button-prev {
@@ -220,7 +230,7 @@ input[type=range]::-ms-track {
 }
 .swiper-slide-next,
 .swiper-slide-prev {
-  opacity: 0.4;
+  opacity: 1;
 }
 .swiper-slide-prev {
   width: 431px;
@@ -331,6 +341,11 @@ input[type=range]::-ms-track {
     flex-wrap: nowrap;
   }
 }
+@media screen and (max-width: 350px) {
+  .welcome_content-hastags {
+    flex-wrap: wrap;
+  }
+}
 .welcome_content-hastags > p {
   margin-right: 18px;
   margin-bottom: 9px;
@@ -355,6 +370,11 @@ input[type=range]::-ms-track {
 @media screen and (max-width: 660px) {
   .welcome__title {
     font-size: 35px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .welcome__title {
+    font-size: 24px;
   }
 }
 .welcome__title > span:first-of-type {
@@ -416,6 +436,11 @@ input[type=range]::-ms-track {
   transform: translateX(-50%);
   filter: blur(5px);
   opacity: 0.3;
+}
+@media screen and (max-width: 660px) {
+  .idea::before {
+    background-image: url("idea-bg-mobile.1b12ac33.svg");
+  }
 }
 .idea__content {
   padding-bottom: 162px;
@@ -551,6 +576,11 @@ input[type=range]::-ms-track {
   filter: blur(5px);
   opacity: 0.3;
 }
+@media screen and (max-width: 660px) {
+  .success::before {
+    background-image: url("success-bg-mobile.3cfde314.svg");
+  }
+}
 .success__content {
   padding-bottom: 148px;
 }
@@ -669,6 +699,7 @@ input[type=range]::-ms-track {
 @media screen and (max-width: 660px) {
   .success__content-body-left-hashtags {
     margin-bottom: 0;
+    flex-wrap: wrap;
   }
 }
 .success__content-body-left-hashtags div {
@@ -785,7 +816,7 @@ input[type=range]::-ms-track {
 @media screen and (max-width: 660px) {
   .success__content-review-content-svg-2 {
     right: 10px;
-    bottom: -364px;
+    bottom: -20px;
   }
 }
 .success__content-review-content > p {
@@ -835,6 +866,11 @@ input[type=range]::-ms-track {
   filter: blur(5px);
   opacity: 0.3;
 }
+@media screen and (max-width: 660px) {
+  .blockchain::before {
+    background-image: url("blockhain-bg-mobile.6346ae60.svg");
+  }
+}
 .blockchain__content {
   padding-bottom: 117px;
   padding-top: 140px;
@@ -856,12 +892,12 @@ input[type=range]::-ms-track {
   .blockchain__content-body {
     display: flex;
     flex-direction: column-reverse;
-    margin-bottom: 0;
+    margin-bottom: 70px;
   }
 }
 .blockchain__content-body-right {
   position: relative;
-  padding: 36px 32px;
+  padding: 45px 32px;
   max-width: 100%;
   height: 100%;
   display: flex;
@@ -1043,7 +1079,7 @@ input[type=range]::-ms-track {
   }
 }
 .form__content > form > input {
-  font-weight: normal;
+  font-weight: 600;
   font-size: 14px;
   color: rgba(55, 54, 54, 0.7);
   margin-bottom: 21px;
@@ -1054,14 +1090,14 @@ input[type=range]::-ms-track {
   width: 85%;
 }
 .form__content > form > input::placeholder {
-  font-weight: normal;
+  font-weight: 600;
   font-size: 14px;
   line-height: 40px;
   color: rgba(55, 54, 54, 0.7);
   opacity: 0.7;
 }
 .form__content > form .description {
-  font-weight: normal;
+  font-weight: 600;
   font-size: 14px;
   color: rgba(55, 54, 54, 0.7);
   margin-bottom: 21px;
@@ -1072,7 +1108,7 @@ input[type=range]::-ms-track {
   width: 85%;
 }
 .form__content > form .description::placeholder {
-  font-weight: normal;
+  font-weight: 600;
   font-size: 14px;
   color: rgba(55, 54, 54, 0.7);
   opacity: 0.7;

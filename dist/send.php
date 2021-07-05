@@ -29,14 +29,14 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'd.av23@yandex.ru'; // Логин на почте
-    $mail->Password   = '23052002'; // Пароль на почте
+    $mail->Username   = 'contact@unistory.app'; // Логин на почте
+    $mail->Password   = 'temppassword'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('d.av23@yandex.ru', 'd.av23');
+    $mail->setFrom('contact@unistory.app', 'contact');
 
     // Получатель письма
-    $mail->addAddress('d.av89@yandex.ru');  
+    $mail->addAddress('skansib@gmail.com');  
 
 // Отправка сообщения
 $mail->isHTML(true);
@@ -53,4 +53,5 @@ else {$result = "error";}
 }
 
 // Отображение результата
-header('Location: thankyou.html');
+
+header('Location: index.html')
