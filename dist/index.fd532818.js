@@ -482,6 +482,7 @@ for (let smoothLink of smoothLinks) {
   });
 }
 ;
+// SLIDER
 var swiper = new _swiperCoreDefault.default(".mySwiper", {
   slidesPerView: 1.2,
   centeredSlides: true,

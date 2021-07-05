@@ -48,6 +48,8 @@ for (let smoothLink of smoothLinks) {
 };
 
 
+
+// SLIDER
 var swiper = new SwiperCore(".mySwiper", {
     slidesPerView:1.2,
     centeredSlides: true,
