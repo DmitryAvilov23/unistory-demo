@@ -442,61 +442,63 @@ id) /*: string*/
 }
 
 },{}],"4ee1I":[function(require,module,exports) {
-var _swiperCore = require('swiper/core');
+var _swiperCore = require("swiper/core");
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 var _swiperCoreDefault = _parcelHelpers.interopDefault(_swiperCore);
 // Install modules
 _swiperCoreDefault.default.use([_swiperCore.Navigation]);
-const {send} = require("emailjs-com");
-const name = document.querySelector('.name');
-const email = document.querySelector('.email');
-const description = document.querySelector('.description');
-const submitBtn = document.querySelector('.send');
-submitBtn.addEventListener('click', e => {
-  e.preventDefault();
-  // const message = {
-  // from_name = name.value,
-  // from_email = email.value,
-  // message:description.value
-  // }
-  send('serviceId', 'templateId', message, user_8HqKOwZnjEk3ocGN3G4Hu);
-  console.log('name', name.value);
-  name.value = '';
-  email.value = '';
-  description.value = '';
-  // Display an info toast with no title
-  Snackbar.show({
-    text: 'Example notification text.'
-  });
-});
+// const { send } = require("emailjs-com")
+const name = document.querySelector(".name");
+const email = document.querySelector(".email");
+const description = document.querySelector(".description");
+const submitBtn = document.querySelector(".send");
+// submitBtn.addEventListener('click', (e)=>{
+// e.preventDefault()
+// // const message = {
+// //     from_name = name.value,
+// //     from_email = email.value,
+// //     message:description.value
+// // }
+// send('serviceId', 'templateId', message, user_8HqKOwZnjEk3ocGN3G4Hu)
+// console.log('name', name.value)
+// name.value = ''
+// email.value = ''
+// description.value = ''
+// // Display an info toast with no title
+// Snackbar.show({text: 'Example notification text.'});
+// })
 // SMOOTH SCROLL
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
-  smoothLink.addEventListener('click', function (e) {
+  smoothLink.addEventListener("click", function (e) {
     e.preventDefault();
-    const id = smoothLink.getAttribute('href');
+    const id = smoothLink.getAttribute("href");
     document.querySelector(id).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+      behavior: "smooth",
+      block: "start"
     });
   });
 }
-;
-// SLIDER
 var swiper = new _swiperCoreDefault.default(".mySwiper", {
   slidesPerView: 1.2,
   centeredSlides: true,
-  spaceBetween: 11,
+  spaceBetween: 5,
   slidesPerGroup: 1,
+  // autoHeight: true,
   loop: true,
   loopFillGroupWithBlank: true,
   navigation: {
     nextEl: ".mySwiper .swiper-button-next",
     prevEl: ".mySwiper__prev"
+  },
+  breakpoints: {
+    1000: {
+      spaceBetween: 11
+    }
   }
 });
 
-},{"swiper/core":"GxxLH","emailjs-com":"ia8T0","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"GxxLH":[function(require,module,exports) {
+},{"swiper/core":"GxxLH","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"GxxLH":[function(require,module,exports) {
 /**
  * Swiper 6.7.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -12063,50 +12065,7 @@ var _default = {
   }
 };
 exports.default = _default;
-},{"../../utils/utils":"3xqzY","../../utils/dom":"36a0X"}],"ia8T0":[function(require,module,exports) {
-var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-_parcelHelpers.defineInteropFlag(exports);
-_parcelHelpers.export(exports, "init", function () {
-  return _methodsInitInit.init;
-});
-_parcelHelpers.export(exports, "send", function () {
-  return _methodsSendSend.send;
-});
-_parcelHelpers.export(exports, "sendForm", function () {
-  return _methodsSendFormSendForm.sendForm;
-});
-var _methodsInitInit = require('./methods/init/init');
-var _methodsSendSend = require('./methods/send/send');
-var _methodsSendFormSendForm = require('./methods/sendForm/sendForm');
-exports.default = {
-  init: _methodsInitInit.init,
-  send: _methodsSendSend.send,
-  sendForm: _methodsSendFormSendForm.sendForm
-};
-
-},{"./methods/init/init":"4rQLp","./methods/send/send":"7p89s","./methods/sendForm/sendForm":"3F0Gf","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"4rQLp":[function(require,module,exports) {
-var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-_parcelHelpers.defineInteropFlag(exports);
-_parcelHelpers.export(exports, "init", function () {
-  return init;
-});
-var _storeStore = require('../../store/store');
-const init = (userID, origin = 'https://api.emailjs.com') => {
-  _storeStore.store._userID = userID;
-  _storeStore.store._origin = origin;
-};
-
-},{"../../store/store":"5AEMQ","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5AEMQ":[function(require,module,exports) {
-var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-_parcelHelpers.defineInteropFlag(exports);
-_parcelHelpers.export(exports, "store", function () {
-  return store;
-});
-const store = {
-  _origin: 'https://api.emailjs.com'
-};
-
-},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5gA8y":[function(require,module,exports) {
+},{"../../utils/utils":"3xqzY","../../utils/dom":"36a0X"}],"5gA8y":[function(require,module,exports) {
 "use strict";
 
 exports.interopDefault = function (a) {
@@ -12148,125 +12107,6 @@ exports.export = function (dest, destName, get) {
     get: get
   });
 };
-},{}],"7p89s":[function(require,module,exports) {
-var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-_parcelHelpers.defineInteropFlag(exports);
-_parcelHelpers.export(exports, "send", function () {
-  return send;
-});
-var _storeStore = require('../../store/store');
-var _utilsValidateParams = require('../../utils/validateParams');
-var _apiSendPost = require('../../api/sendPost');
-const send = (serviceID, templateID, templatePrams, userID) => {
-  const uID = userID || _storeStore.store._userID;
-  _utilsValidateParams.validateParams(uID, serviceID, templateID);
-  const params = {
-    lib_version: '3.1.0',
-    user_id: uID,
-    service_id: serviceID,
-    template_id: templateID,
-    template_params: templatePrams
-  };
-  return _apiSendPost.sendPost('/api/v1.0/email/send', JSON.stringify(params), {
-    'Content-type': 'application/json'
-  });
-};
-
-},{"../../store/store":"5AEMQ","../../utils/validateParams":"3uBfY","../../api/sendPost":"1DnHR","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"3uBfY":[function(require,module,exports) {
-var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-_parcelHelpers.defineInteropFlag(exports);
-_parcelHelpers.export(exports, "validateParams", function () {
-  return validateParams;
-});
-const validateParams = (userID, serviceID, templateID) => {
-  if (!userID) {
-    throw 'The user ID is required. Visit https://dashboard.emailjs.com/admin/integration';
-  }
-  if (!serviceID) {
-    throw 'The service ID is required. Visit https://dashboard.emailjs.com/admin';
-  }
-  if (!templateID) {
-    throw 'The template ID is required. Visit https://dashboard.emailjs.com/admin/templates';
-  }
-  return true;
-};
-
-},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"1DnHR":[function(require,module,exports) {
-var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-_parcelHelpers.defineInteropFlag(exports);
-_parcelHelpers.export(exports, "sendPost", function () {
-  return sendPost;
-});
-var _modelsEmailJSResponseStatus = require('../models/EmailJSResponseStatus');
-var _storeStore = require('../store/store');
-const sendPost = (url, data, headers = {}) => {
-  return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
-    xhr.addEventListener('load', ({target}) => {
-      const responseStatus = new _modelsEmailJSResponseStatus.EmailJSResponseStatus(target);
-      if (responseStatus.status === 200 || responseStatus.text === 'OK') {
-        resolve(responseStatus);
-      } else {
-        reject(responseStatus);
-      }
-    });
-    xhr.addEventListener('error', ({target}) => {
-      reject(new _modelsEmailJSResponseStatus.EmailJSResponseStatus(target));
-    });
-    xhr.open('POST', _storeStore.store._origin + url, true);
-    Object.keys(headers).forEach(key => {
-      xhr.setRequestHeader(key, headers[key]);
-    });
-    xhr.send(data);
-  });
-};
-
-},{"../models/EmailJSResponseStatus":"1Ug4Z","../store/store":"5AEMQ","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"1Ug4Z":[function(require,module,exports) {
-var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-_parcelHelpers.defineInteropFlag(exports);
-_parcelHelpers.export(exports, "EmailJSResponseStatus", function () {
-  return EmailJSResponseStatus;
-});
-class EmailJSResponseStatus {
-  constructor(httpResponse) {
-    this.status = httpResponse.status;
-    this.text = httpResponse.responseText;
-  }
-}
-
-},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"3F0Gf":[function(require,module,exports) {
-var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-_parcelHelpers.defineInteropFlag(exports);
-_parcelHelpers.export(exports, "sendForm", function () {
-  return sendForm;
-});
-var _storeStore = require('../../store/store');
-var _utilsValidateParams = require('../../utils/validateParams');
-var _apiSendPost = require('../../api/sendPost');
-const findHTMLForm = form => {
-  let currentForm;
-  if (typeof form === 'string') {
-    currentForm = document.querySelector(form);
-  } else {
-    currentForm = form;
-  }
-  if (!currentForm || currentForm.nodeName !== 'FORM') {
-    throw 'The 3rd parameter is expected to be the HTML form element or the style selector of form';
-  }
-  return currentForm;
-};
-const sendForm = (serviceID, templateID, form, userID) => {
-  const uID = userID || _storeStore.store._userID;
-  const currentForm = findHTMLForm(form);
-  _utilsValidateParams.validateParams(uID, serviceID, templateID);
-  const formData = new FormData(currentForm);
-  formData.append('lib_version', '3.1.0');
-  formData.append('service_id', serviceID);
-  formData.append('template_id', templateID);
-  formData.append('user_id', uID);
-  return _apiSendPost.sendPost('/api/v1.0/email/send-form', formData);
-};
-
-},{"../../store/store":"5AEMQ","../../utils/validateParams":"3uBfY","../../api/sendPost":"1DnHR","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}]},["A7H4y","4ee1I"], "4ee1I", "parcelRequirec20d")
+},{}]},["A7H4y","4ee1I"], "4ee1I", "parcelRequirec20d")
 
 //# sourceMappingURL=index.fd532818.js.map

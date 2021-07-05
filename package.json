@@ -13,6 +13,7 @@
     "node-snackbar": "^0.1.16",
     "nodemailer": "^6.6.2",
     "parcel": "^2.0.0-beta.2",
+    "prettier": "^2.3.2",
     "swiper": "^6.7.1",
     "toastr": "^2.1.4"
   },

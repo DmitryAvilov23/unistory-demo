@@ -103,15 +103,23 @@ input[type=range]::-ms-track {
 }
 :root {
   --black: #232323;
-  --white:#fff;
-  --blue:linear-gradient(180deg, #00D5E2 100 %, #3258BA 100 %);
-  --dark-white:rgba(255, 255, 255, 0.5);
-  --gold:rgba(249, 188, 76, 0,48);
+  --white: #fff;
+  --blue: linear-gradient(180deg, #00d5e2 100 %, #3258ba 100 %);
+  --dark-white: rgba(255, 255, 255, 0.5);
+  --gold: rgba(249, 188, 76, 0, 48);
   /* Gradients */
-  --black-gradient: linear-gradient(348.64deg, #1C2A32 34.4%, #19181B 95.38%);
-  --dark-blue-gradient: linear-gradient(260.66deg, rgba(7, 100, 120, 0.0686) 18.82%, rgba(0, 0, 0, 0) 94%);
-  --light-blue-gradient:linear-gradient(145.11deg, #00D5E2 20.54%, #3258BA 98.13%);
-  --green-gradient: linear-gradient(145.11deg, #00D5E2 20.54%, #3258BA 98.13%);
+  --black-gradient: linear-gradient(348.64deg, #1c2a32 34.4%, #19181b 95.38%);
+  --dark-blue-gradient: linear-gradient(
+    260.66deg,
+    rgba(7, 100, 120, 0.0686) 18.82%,
+    rgba(0, 0, 0, 0) 94%
+  );
+  --light-blue-gradient: linear-gradient(
+    145.11deg,
+    #00d5e2 20.54%,
+    #3258ba 98.13%
+  );
+  --green-gradient: linear-gradient(145.11deg, #00d5e2 20.54%, #3258ba 98.13%);
 }
 .hashtag {
   color: #fff;
@@ -122,7 +130,7 @@ input[type=range]::-ms-track {
   font-family: "Red Hat Display", sans-serif;
 }
 .gradient__txt {
-  background: linear-gradient(145.11deg, #2EDAE1 20.54%, #04276B 98.13%);
+  background: linear-gradient(145.11deg, #2edae1 20.54%, #04276b 98.13%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
@@ -174,9 +182,10 @@ input[type=range]::-ms-track {
   transform: translateX(-50%);
   width: 80%;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1000px) {
   .mySwiper {
     width: 100%;
+    height: 100%;
   }
 }
 .swiper-slide {
@@ -207,7 +216,7 @@ input[type=range]::-ms-track {
 }
 .swiper-button-prev:hover.swiper-button-prev > svg > path,
 .swiper-button-next:hover.swiper-button-next > svg > path {
-  fill: #1199C5;
+  fill: #1199c5;
 }
 .swiper-slide-next,
 .swiper-slide-prev {
@@ -227,13 +236,18 @@ input[type=range]::-ms-track {
   left: 7px;
 }
 .main__layout {
-  background: linear-gradient(348.64deg, #1C2A32 34.4%, #19181B 95.38%);
+  background: linear-gradient(348.64deg, #1c2a32 34.4%, #19181b 95.38%);
   width: 100%;
   height: 100%;
   min-height: 100vh;
   padding-bottom: 105px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
+  .main__layout {
+    padding-bottom: 41px;
+  }
+}
+@media screen and (max-height: 812px) {
   .main__layout {
     padding-bottom: 41px;
   }
@@ -301,7 +315,7 @@ input[type=range]::-ms-track {
 .discuss {
   margin-top: 42px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .discuss {
     text-align: center;
   }
@@ -312,7 +326,7 @@ input[type=range]::-ms-track {
   align-items: flex-start;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .welcome_content-hastags {
     flex-wrap: nowrap;
   }
@@ -321,7 +335,7 @@ input[type=range]::-ms-track {
   margin-right: 18px;
   margin-bottom: 9px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .welcome_content-hastags > p {
     font-size: 12px;
     margin-right: 4px;
@@ -338,13 +352,13 @@ input[type=range]::-ms-track {
     white-space: normal;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .welcome__title {
     font-size: 35px;
   }
 }
 .welcome__title > span:first-of-type {
-  color: #2EDAE1;
+  color: #2edae1;
 }
 .welcome__title > span:last-of-type {
   white-space: nowrap;
@@ -352,7 +366,7 @@ input[type=range]::-ms-track {
 .welcome_stats {
   display: flex;
 }
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 660px) {
   .welcome_stats {
     justify-content: center;
   }
@@ -365,14 +379,14 @@ input[type=range]::-ms-track {
 .welcome_stats-stat > p {
   font-weight: bold;
   font-size: 24px;
-  color: #F0F0F0;
+  color: #f0f0f0;
   margin-right: 4px;
   font-family: "Red Hat Display", sans-serif;
 }
 .welcome_stats-stat > span {
   font-weight: 700;
   font-size: 10px;
-  color: #F9BC4C7A;
+  color: #f9bc4c7a;
   font-family: "Red Hat Display", sans-serif;
 }
 @media screen and (max-width: 720px) {
@@ -407,7 +421,7 @@ input[type=range]::-ms-track {
   padding-bottom: 162px;
   padding-top: 93px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .idea__content {
     padding-bottom: 40px;
     padding-top: 40px;
@@ -420,7 +434,7 @@ input[type=range]::-ms-track {
   text-align: center;
   margin-bottom: 74px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .idea__content > h4 {
     font-size: 36px;
   }
@@ -434,7 +448,7 @@ input[type=range]::-ms-track {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .idea__process {
     display: flex;
     flex-direction: column;
@@ -458,7 +472,7 @@ input[type=range]::-ms-track {
   width: 100%;
   height: 100%;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .idea__process-img {
     justify-content: center;
     display: none;
@@ -485,7 +499,7 @@ input[type=range]::-ms-track {
   display: none;
   margin: 32px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .idea__process-step > img {
     display: block;
     margin: 0;
@@ -520,7 +534,7 @@ input[type=range]::-ms-track {
   grid-row: 4/5;
 }
 .success {
-  background: linear-gradient(348.64deg, #1C2A32 34.4%, #19181B 95.38%);
+  background: linear-gradient(348.64deg, #1c2a32 34.4%, #19181b 95.38%);
   position: relative;
 }
 .success::before {
@@ -540,7 +554,7 @@ input[type=range]::-ms-track {
 .success__content {
   padding-bottom: 148px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .success__content {
     padding-bottom: 40px;
   }
@@ -583,11 +597,11 @@ input[type=range]::-ms-track {
   align-items: center;
   margin-bottom: 150px;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1000px) {
   .success__content-body {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0;
+    margin-bottom: 62px;
   }
 }
 .success__content-body-left {
@@ -629,7 +643,7 @@ input[type=range]::-ms-track {
   font-size: 16px;
   line-height: 24px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .success__content-body-left > div p {
     margin: 0 auto;
   }
@@ -639,7 +653,7 @@ input[type=range]::-ms-track {
     padding: 0;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .success__content-body-left {
     align-items: center;
   }
@@ -652,7 +666,7 @@ input[type=range]::-ms-track {
   z-index: 1;
   padding-left: 30px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .success__content-body-left-hashtags {
     margin-bottom: 0;
   }
@@ -670,7 +684,7 @@ input[type=range]::-ms-track {
   width: calc(100% + 100px);
   border-radius: 40px 0px 0px 40px;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1000px) {
   .success__content-body-left-bg {
     top: 0;
     box-shadow: none;
@@ -686,7 +700,7 @@ input[type=range]::-ms-track {
   width: 100%;
   z-index: 1;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1000px) {
   .success__content-body-right > img {
     opacity: 0;
   }
@@ -698,7 +712,7 @@ input[type=range]::-ms-track {
   grid-gap: 140px 150px;
   margin-bottom: 134px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .success__content-steps {
     margin-bottom: 62px;
   }
@@ -734,9 +748,9 @@ input[type=range]::-ms-track {
   backdrop-filter: blur(44px);
   padding: 37px 50px 58px 104px;
   border-radius: 44px;
-  border: 1px solid #62696D;
+  border: 1px solid #62696d;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .success__content-review {
     padding: 0;
   }
@@ -757,10 +771,22 @@ input[type=range]::-ms-track {
   left: -60px;
   top: 60px;
 }
+@media screen and (max-width: 660px) {
+  .success__content-review-content-svg-1 {
+    left: -36px;
+    top: 64px;
+  }
+}
 .success__content-review-content-svg-2 {
   position: absolute;
   right: 10px;
   bottom: -20px;
+}
+@media screen and (max-width: 660px) {
+  .success__content-review-content-svg-2 {
+    right: 10px;
+    bottom: -364px;
+  }
 }
 .success__content-review-content > p {
   font-weight: normal;
@@ -792,7 +818,7 @@ input[type=range]::-ms-track {
   line-height: 22px;
 }
 .blockchain {
-  background: linear-gradient(348.64deg, #1C2A32 34.4%, #19181B 95.38%);
+  background: linear-gradient(348.64deg, #1c2a32 34.4%, #19181b 95.38%);
   position: relative;
 }
 .blockchain::before {
@@ -813,7 +839,7 @@ input[type=range]::-ms-track {
   padding-bottom: 117px;
   padding-top: 140px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .blockchain__content {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -826,7 +852,7 @@ input[type=range]::-ms-track {
   margin-bottom: 150px;
   padding-top: 50px;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1000px) {
   .blockchain__content-body {
     display: flex;
     flex-direction: column-reverse;
@@ -845,7 +871,7 @@ input[type=range]::-ms-track {
   justify-content: center;
   margin-bottom: 15px;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1000px) {
   .blockchain__content-body-right {
     padding-top: 30px;
     padding-bottom: 0;
@@ -863,7 +889,7 @@ input[type=range]::-ms-track {
   border-radius: 0px 40px 40px 0px;
   right: 0;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1000px) {
   .blockchain__content-body-right-bg {
     box-shadow: none;
     border-radius: 40px 40px 40px 40px;
@@ -878,7 +904,7 @@ input[type=range]::-ms-track {
   margin-bottom: 15px;
   z-index: 1;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .blockchain__content-body-right h5 {
     text-align: center;
   }
@@ -894,7 +920,7 @@ input[type=range]::-ms-track {
   z-index: 1;
   line-height: 24px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .blockchain__content-body-right p {
     text-align: center;
   }
@@ -912,7 +938,7 @@ input[type=range]::-ms-track {
   width: 100%;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .blockchain__content-body-right-hashtags {
     justify-content: center;
   }
@@ -934,20 +960,20 @@ input[type=range]::-ms-track {
   width: 100%;
   z-index: 1;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1000px) {
   .blockchain__content-body-left > img {
     opacity: 0;
   }
 }
 .form {
-  background: #1C2932;
+  background: #1c2932;
 }
 .form-bg {
   padding: 105px 13px;
   position: relative;
   background: linear-gradient(145.11deg, rgba(0, 215, 226, 0.466) 20.54%, rgba(50, 89, 186, 0.568) 98.13%);
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .form-bg {
     padding-top: 20px;
     padding-bottom: 55px;
@@ -1000,7 +1026,7 @@ input[type=range]::-ms-track {
   font-size: 36px;
   margin-bottom: 5px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .form__content > form > h2 {
     font-size: 24px;
     margin-bottom: 15px;
@@ -1011,7 +1037,7 @@ input[type=range]::-ms-track {
   font-size: 18px;
   margin-bottom: 26px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 660px) {
   .form__content > form > p {
     font-size: 16px;
   }
@@ -1052,7 +1078,7 @@ input[type=range]::-ms-track {
   opacity: 0.7;
 }
 .form__content > form > button {
-  background: linear-gradient(145.91deg, #12F1FF 20.18%, #3281BA 113.79%);
+  background: linear-gradient(145.91deg, #12f1ff 20.18%, #3281ba 113.79%);
   font-family: "Red Hat Display", sans-serif;
 }
 .footer {
