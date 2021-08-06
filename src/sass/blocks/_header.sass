@@ -1,0 +1,42 @@
+.header
+    padding-top: 22px
+    &--pos
+        margin-bottom: 108px
+
+        @media screen and (max-width: 850px)
+            margin-bottom: 75px
+    &__container
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        @media screen and (max-width: 576px)
+            justify-content: center
+    &__logo
+        max-width: 157px
+        max-height: 38px
+
+        @media screen and (max-width: 1024px)
+            max-width: 135px
+    &__menu
+        @media screen and (max-width: 576px)
+            display: none
+.menu
+    &__list
+        display: flex
+        &-link
+            color: rgba(255, 255, 255, 0.5)
+            font-style: normal
+            font-weight: 500
+            font-size: 14px
+            line-height: 116%
+            &:hover, &--active
+                @include setTextGradient(linear-gradient(179.11deg,#2edae1 20.54%,#04276b 98.13%))
+            @media screen and (max-width: 1024px)
+                font-size: 12px
+                
+        &-item
+            &:not(:last-child)
+                padding-right: 53px
+                @media screen and (max-width: 1024px)
+                    padding-right: 40px

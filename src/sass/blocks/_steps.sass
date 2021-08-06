@@ -1,0 +1,123 @@
+.steps
+    background: linear-gradient(260.66deg, rgba(7, 100, 120, 0.0686) 18.82%, rgba(0, 0, 0, 0) 94%)
+    padding: 93px 0 146px
+    position: relative
+    overflow: hidden
+
+    &::after
+        content: ""
+        background-image: url('../img/steps/step-bg.svg')
+        filter: blur(10px)
+        z-index: 1
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        object-fit: cover
+        width: 100%
+        height: 100%
+
+    &__title
+        font-style: normal
+        font-weight: 900
+        font-size: 42px
+        line-height: 145%
+        text-align: center
+        color: rgba(255, 255, 255, 0.5)
+        padding-bottom: 74px
+
+        @media screen and (max-width: 992px)
+            font-size: 32px
+.steps-wrapper
+    display: flex
+    position: relative
+    flex-direction: column
+    align-items: center
+    z-index: 2
+
+    &__step
+        &:not(:last-child)
+            margin-bottom: 73px
+    &__decorative-line
+        height: inherit
+        width: 1px
+        background-color: #284E7B
+        position: absolute
+        height: 685px
+        top: 75px
+
+        @media screen and (max-width: 768px)
+            display: none
+.step
+    display: flex
+    min-height: 173px
+    position: relative
+    justify-content: flex-end
+    flex-direction: row-reverse
+    align-items: center
+    max-width: 715px
+    width: 100%
+
+    &:nth-child(2n)
+        justify-content: flex-start
+
+        @media screen and (max-width: 768px)
+            justify-content: space-around
+            flex-direction: row
+        @media screen and (max-width: 576px)
+            justify-content: space-between
+            img
+                margin-right: 0
+                margin-left: 10px
+    &__icon
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+
+        @media screen and (max-width: 768px)
+            position: static
+            transform: unset
+        @media screen and (max-width: 576px)
+            img
+                margin-right: 10px
+        @media screen and (max-width: 480px)
+            img
+                width: 160px
+                height: 160px
+        @media screen and (max-width: 380px)
+            img
+                width: 120px
+                height: 120px
+    &__text-wrapper
+        max-width: 211px
+    &__title
+        @include setTextGradient(linear-gradient(145.11deg, #2EDAE1 20.54%, #04276B 98.13%))
+        padding-bottom: 8px
+        font-style: normal
+        font-weight: bold
+        font-size: 22px
+        line-height: 116%
+
+        @media screen and (max-width: 768px)
+            font-size: 32px
+        @media screen and (max-width: 576px)
+            font-size: 22px
+        @media screen and (max-width: 380px)
+            font-size: 18px
+    &__description
+        font-style: normal
+        color: #FFFFFF
+        font-weight: normal
+        font-size: 14px
+        line-height: 157%
+
+        @media screen and (max-width: 768px)
+            font-size: 17px
+        @media screen and (max-width: 576px)
+            font-size: 14px
+        @media screen and (max-width: 380px)
+            font-size: 13px
+    @media screen and (max-width: 768px)
+        justify-content: space-around
+    @media screen and (max-width: 576px)
+        justify-content: space-between

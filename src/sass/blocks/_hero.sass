@@ -1,0 +1,140 @@
+.hero
+    padding-bottom: 103px
+    &__container
+        position: relative
+
+        @media screen and (max-width: 768px)
+            display: flex
+            flex-direction: column
+            align-items: center
+    &__info-wrapper
+        position: relative
+        z-index: 2
+        max-width: 555px
+        padding-top: 65px
+
+        @media screen and (max-width: 1024px)
+            padding-top: 25px
+        @media screen and (max-width: 950px)
+            max-width: 420px
+        @media screen and (max-width: 850px)
+            max-width: 340px
+        @media screen and (max-width: 768px)
+            padding-top: 320px
+            max-width: 480px
+        @media screen and (max-width: 576px)
+            max-width: 90%
+        @media screen and (max-width: 480px)
+            max-width: 100%
+        @media screen and (max-width: 420px)
+            padding-top: 270px
+    &__title
+        padding-bottom: 17px
+        font-style: normal
+        font-weight: bold
+        font-size: 46px
+        line-height: 130%
+        color: #FFFFFF
+        span
+            color: #2EDAE1
+        @media screen and (max-width: 1200px)
+            font-size: 40px
+        @media screen and (max-width: 1024px)
+            font-size: 36px
+        @media screen and (max-width: 950px)
+            font-size: 32px
+        @media screen and (max-width: 768px)
+            font-size: 40px
+        @media screen and (max-width: 420px)
+            font-size: 32px
+    &__tags-wrapper
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+        margin-bottom: 14px
+    &__tag
+        margin: 0 18px 12px 0
+        @media screen and (max-width: 950px)
+            margin: 0 10px 10px 0
+    &__button
+        @media screen and (max-width: 950px)
+            padding: 16px 34px
+            font-style: normal
+            font-weight: 900
+            font-size: 12px
+        @media screen and (max-width: 480px)
+            width: 100%
+    &__banner
+        position: absolute
+        z-index: 1
+        top: -2px
+        right: 5px
+
+        @media screen and (max-width: 1200px)
+            width: 490px
+        @media screen and (max-width: 1024px)
+            width: 440px
+            right: -5px
+        @media screen and (max-width: 850px)
+            width: 410px
+        @media screen and (max-width: 768px)
+            top: -20px
+            right: unset
+        @media screen and (max-width: 420px)
+            width: 350px
+        @media screen and (max-width: 360px)
+            width: 310px
+    &__records
+        margin-top: 193px
+
+        @media screen and (max-width: 1024px)
+            margin-top: 125px
+        @media screen and (max-width: 360px)
+            margin-top: 90px
+    @media screen and (max-width: 360px)
+        padding-bottom: 60px;
+.records
+    display: flex
+    &__record
+        &:not(:last-child)
+            margin-right: 40px
+            @media screen and (max-width: 420px)
+                margin: 0
+        &:nth-child(2)
+            margin-right: 33px
+            @media screen and (max-width: 420px)
+                margin: 0
+    @media screen and (max-width: 480px)
+        width: 100%;
+        justify-content: space-between;
+.record
+    display: flex
+    align-items: center
+    &__index
+        font-style: normal
+        font-weight: bold
+        line-height: 15px
+        font-size: 24px
+        color: rgba(240, 240, 240, 0.48)
+
+        @media screen and (max-width: 360px)
+            font-size: 18px;
+    &__icon
+        opacity: 0.6
+        margin-left: 6px
+        height: 26px
+        transform: translateY(-10%)
+
+        @media screen and (max-width: 360px)
+            width: 40px;
+    &__text
+        font-style: normal
+        font-weight: bold
+        font-size: 10px
+        line-height: 80%
+        color: rgba(249, 188, 76, 0.48)
+        max-width: 62px
+        padding-left: 5px
+
+        @media screen and (max-width: 360px)
+            font-size: 9px;
