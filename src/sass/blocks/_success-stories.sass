@@ -1,0 +1,66 @@
+.success-stories
+    padding: 108px 0 148px
+    &__title
+        text-align: right
+        color: $primary-gray
+        font-style: normal;
+        font-weight: 900;
+        font-size: 42px;
+        line-height: 145%;
+.slider-wrapper
+    display: flex
+    align-items: center
+    position: relative
+.slider-info
+    width: 591px
+    background: linear-gradient(63.58deg, rgba(0, 156, 166, 0.51) 2.01%, rgba(28, 187, 255, 0.51) 91.54%);
+    box-shadow: 13px 50px 42px -29px rgba(0, 0, 0, 0.38), inset -168px -1px 39px -40px rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(42px);
+    padding: 111px 95px 109px
+    border-radius: 40px 0px 0px 40px;
+    &__title
+        color: white
+        font-weight: 900
+        font-size: 30px
+        line-height: 203%
+        padding-bottom: 15px
+    &__tags
+        display: flex
+        margin-bottom: 22px
+    &__tag
+        margin-right: 7px
+        background: linear-gradient(153.11deg, #07A3AD 20.54%, #3258BA 98.13%), linear-gradient(153.11deg, #00D5E2 20.54%, #3258BA 98.13%);
+        border: none;
+    &__description
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: white
+        max-width: 303px
+.slider
+    overflow: hidden
+    width: 565px
+    padding: 0 40px;
+    &__background
+        position: absolute
+        top: 0
+        z-index: 1
+        width: inherit
+        right: 0
+    &__slides-wrapper
+        display: flex
+        position: relative
+        z-index: 2
+        height: 322px;
+    &__slide
+        background: white
+        z-index: 2
+        border: 1px solid gray;
+        flex-basis: 85%;
+        flex-shrink: 0;
+        &:not(:last-child)
+            margin-right: 4px;
+    &__button
+        position: relative
+        z-index: 2
