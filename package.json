@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "parcel index.html",
-    "build": "rm -rf build && parcel build index.html --dist-dir build"
+    "build": "parcel build index.html --dist-dir build"
   },
   "author": "unistory",
   "license": "ISC",
