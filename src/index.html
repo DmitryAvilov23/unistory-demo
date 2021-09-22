@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>Document</title>
@@ -215,20 +215,31 @@
               src="images/macbook-top.png"
               alt="Slider: Macbook background"
             />
-            <div class="slider__slides-wrapper" id="slides-wrapper">
-              <div class="slider__slide">1</div>
-              <!-- /.slider__slide -->
-              <div class="slider__slide">2</div>
-              <!-- /.slider__slide -->
-              <div class="slider__slide">3</div>
-              <!-- /.slider__slide -->
-              <div class="slider__slide">4</div>
-              <!-- /.slider__slide -->
+            <div class="slider__content">
+              <div class="slider__slides-wrapper" id="slides-wrapper">
+                <div class="slider__slide"><img src="images/million1.png" draggable="false"></img></div>
+                <!-- /.slider__slide -->
+                <div class="slider__slide"><img src="images/million2.png" draggable="false"></img></div>
+                <!-- /.slider__slide -->
+                <div class="slider__slide"><img src="images/million3.png" draggable="false"></img></div>
+                <!-- /.slider__slide -->
+                <div class="slider__slide"><img src="images/million4.png" draggable="false"></img></div>
+                <!-- /.slider__slide -->
+              </div>
+              <!-- /.slider__slides-wrapper -->
             </div>
-            <!-- /.slider__slides-wrapper -->
-            <button class="slider__button" id="btn-prev"><</button>
-            <button class="slider__button slider__btn--next" id="btn-next">
-              >
+            <!-- /.slider__content -->
+            <button class="slider__button slider__button--prev" id="btn-prev">
+              <svg class="slider__button-icon">
+                <use xlink:href="images/sprite.svg#slider-arrow"></use>
+              </svg>
+              <!-- /.slider__button-icon -->
+            </button>
+            <button class="slider__button" id="btn-next">
+              <svg class="slider__button-icon">
+                <use xlink:href="images/sprite.svg#slider-arrow"></use>
+              </svg>
+              <!-- /.slider__button-icon -->
             </button>
           </div>
           <!-- /.slider slider-wrapper__slider -->

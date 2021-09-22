@@ -39,28 +39,58 @@
         color: white
         max-width: 303px
 .slider
-    overflow: hidden
     width: 565px
-    padding: 0 40px;
+    position: relative
+    &__content
+        // padding: 0 40px;
+        overflow-x: hidden
     &__background
         position: absolute
-        top: 0
+        top: -40px
         z-index: 1
-        width: inherit
+        width: calc(100% + 2px)
         right: 0
     &__slides-wrapper
         display: flex
+        height: inherit
         position: relative
         z-index: 2
-        height: 322px;
     &__slide
-        background: white
         z-index: 2
-        border: 1px solid gray;
+        height: max-content
         flex-basis: 85%;
+        transition: 0.4s
+        border-radius: 10px
+        opacity: 0.3
         flex-shrink: 0;
-        &:not(:last-child)
-            margin-right: 4px;
+        &--active
+            opacity: 1
+        img
+            object-fit: cover
+            height: inherit;
+            width: 100%
+            border-radius: inherit
     &__button
-        position: relative
+        position: absolute
+        top: 50%;
+        width: 20px
+        height: 20px
+        border: none
+        display: flex
+        align-items: center
+        justify-content: center
+        right: 30px;
+        transform: translateY(-50%)
         z-index: 2
+        border-radius: 50%
+        &:hover
+            background: #139AC9
+        &--prev
+            right: unset;
+            left: 30px
+
+            svg
+                transform: scale(-1, 1)
+        &-icon
+            width: 8px
+            height: 8px
