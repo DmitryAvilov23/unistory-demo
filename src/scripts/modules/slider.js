@@ -167,9 +167,10 @@ export class Slider {
     `;
   }
 
-  createEventListeners() {
+  createEventListeners(event) {
     this.btnPrev.addEventListener("click", this.changeSlideToPrev);
     this.btnNext.addEventListener("click", this.changeSlideToNext);
+
     this.slidesWrapper.parentNode.addEventListener(
       "resize",
       this.moveSliderWrapper
@@ -177,17 +178,33 @@ export class Slider {
 
     this.slidesWrapper.addEventListener("mousedown", this.swipeStart);
     this.slidesWrapper.addEventListener("touchstart", this.swipeStart);
+
+    this.createEventListenersForArrowKeys(event);
+  }
+
+  createEventListenersForArrowKeys() {
+    const onMouseEnter = (event) => {
+      if (event.key === "ArrowRight") this.changeSlideToNext();
+      if (event.key === "ArrowLeft") this.changeSlideToPrev();
+    };
+
+    this.slidesWrapper.addEventListener("mouseenter", () => {
+      document.addEventListener("keydown", onMouseEnter);
+    });
+
+    this.slidesWrapper.addEventListener("mouseleave", () => {
+      document.removeEventListener("keydown", onMouseEnter);
+    });
   }
 
   swipeStart(event) {
-    console.log(1);
     this.posInit = this.posX1 = event.clientX
       ? event.clientX
       : event.touches[0].clientX;
 
     this.slidesWrapper.style.cssText += `
-      transition: unset;
       cursor: grab;
+      transition: unset;
     `;
 
     document.addEventListener("touchmove", this.swipeAction);
@@ -197,7 +214,6 @@ export class Slider {
   }
 
   swipeAction(event) {
-    console.log(3);
     const trfRegExp = /[-0-9.]+(?=px)/,
       transform = +this.slidesWrapper.style.transform.match(trfRegExp)[0];
 
@@ -213,7 +229,6 @@ export class Slider {
   }
 
   swipeEnd() {
-    console.log(4);
     this.slidesWrapper.style.cssText += `
       transition: 0.4s;
       cursor: default;
