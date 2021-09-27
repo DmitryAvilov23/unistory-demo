@@ -17,13 +17,13 @@ import Million1 from "../img/success/million1.png";
 import Million2 from "../img/success/million2.png";
 import Million3 from "../img/success/million3.png";
 import Million4 from "../img/success/million4.png";
-// Модули
-import test from "./modules/test";
-
+// Модули и классы
 import { Slider } from "./modules/slider";
+import { ScrollTo } from "./modules/scrollTo";
 
 document.addEventListener("DOMContentLoaded", () => {
-  test();
+  "use strict";
+
   //Sliders
   const successSlider = new Slider({
     slidesWrapperId: "slides-wrapper",
@@ -33,4 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btnPrev: document.getElementById("btn-prev"),
     btnNext: document.getElementById("btn-next"),
   });
+
+  //ScrollIntoView
+  const scrollIntoView = new ScrollTo(document.body);
 });
