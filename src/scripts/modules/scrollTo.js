@@ -34,6 +34,5 @@ export class ScrollTo {
 
   createBindings() {
     this.createScrollIntoView = this.createScrollIntoView.bind(this);
-    this.scrollIntoView = this.scrollIntoView.bind(this);
   }
 }
